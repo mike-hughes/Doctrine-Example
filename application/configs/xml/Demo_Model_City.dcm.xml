@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="Demo_Model_City" table="city">
+        <id name="_ID" type="integer" column="ID">
+			<generator strategy="AUTO" />
+		</id>
+        <field name="_Name" column="Name" type="string" length="35" />
+        <field name="_CountryCode" column="CountryCode" type="string" />
+        <field name="_District" column="District" type="string" />
+        <field name="_Population" column="Population" type="integer" />
+		<many-to-one field="_Country" target-entity="Demo_Model_Country" inversed-by="_Cities" >
+			<join-column name="CountryCode" referenced-column-name="Code" />
+		</many-to-one>		
+    </entity>
+</doctrine-mapping>

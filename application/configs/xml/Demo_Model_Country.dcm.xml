@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="Demo_Model_Country" table="country">
+        <id name="_Code" type="string" column="Code" />
+        <field name="_Name" column="Name" type="string" length="52" nullable="false" unique="true" />
+        <field name="_Continent" column="Continent" type="string" nullable="false" />
+        <field name="_Region" column="Region" type="string" length="26" />
+        <field name="_SurfaceArea" column="SurfaceArea" type="decimal" />
+        <field name="_IndepYear" column="IndepYear" type="smallint" />
+        <field name="_Population" column="Population" type="integer" />
+        <field name="_LifeExpectancy" column="LifeExpectancy" type="decimal" />
+        <field name="_GNP" column="GNP" type="decimal" />
+        <field name="_GNPOld" column="GNPOld" type="decimal" />
+        <field name="_LocalName" column="LocalName" type="string" length="45" />
+        <field name="_GovernmentForm" column="GovernmentForm" type="string" length="45" />
+        <field name="_HeadOfState" column="HeadOfState" type="string" length="60" />
+        <field name="_Capital" column="Capital" type="integer" />
+        <field name="_Code2" column="Code2" type="string" length="2" />
+		<one-to-many field="_Cities" target-entity="Demo_Model_City" mapped-by="_Country" />
+		<one-to-many field="_Languages" target-entity="Demo_Model_Language" mapped-by="_Country" />
+    </entity>
+</doctrine-mapping>

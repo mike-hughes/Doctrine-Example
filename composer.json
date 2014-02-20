@@ -1,0 +1,7 @@
+{
+    "require": {
+        "zendframework/zendframework1": "dev-master",
+		"doctrine/orm": "2.3.5",
+		"phpunit/phpunit": "3.7.*"
+    }
+}

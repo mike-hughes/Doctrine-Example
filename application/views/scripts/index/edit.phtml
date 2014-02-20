@@ -1,0 +1,36 @@
+<style>
+th {
+	text-align: right;
+	vertical-align: top;
+}
+</style>
+<div>
+    <h1><?php echo $this->Country->getName(); ?></h1>
+	<form method="POST" action="">
+		<input type="hidden" name="country" value="<?php echo $this->Country->getCode(); ?>">	
+		<table>
+			<tr><th>Name</th><td><?php echo $this->Country->getName(); ?></td><tr>
+			<tr><th>Continent</th><td><?php echo $this->Country->getContinent(); ?></td><tr>
+			<tr><th>Region</th><td><?php echo $this->Country->getRegion(); ?></td><tr>
+			<tr><th>Surface Area</th><td><?php echo $this->Country->getSurfaceArea(); ?> square miles</td><tr>
+			<tr><th>Year of Independence</th><td><?php echo $this->Country->getIndepYear(); ?></td><tr>
+			<tr><th>Population</th><td><input type="text" name="Population" value="<?php echo $this->Country->getPopulation(); ?>"></td><tr>
+			<tr><th>GNP($)</th><td><input type="text" name="GNP" value="<?php echo $this->Country->getGNP() * 1000; ?>"></td><tr>
+			<tr><th>Form of Government</th><td><?php echo $this->Country->getGovernmentForm(); ?></td><tr>
+			<tr><th>Head Of State</th><td><input type="text" name="HeadOfState" value="<?php echo $this->Country->getHeadOfState(); ?>"></td><tr>
+			<tr><th>Languages</th><td>
+				<ul>
+			<?php foreach ($this->Country->getLanguages() as $oLanguage) : ?>
+					<li><?php echo $oLanguage->getLanguage(); ?></li>
+			<?php endforeach; ?>
+				</ul>
+			</td><tr>
+			
+		</table>
+		<input type="submit">
+	</form>
+</div>
+<div>
+	<a href="/">Return to Country List</a>
+</div>
+

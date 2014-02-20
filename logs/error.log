@@ -1,0 +1,10 @@
+[Wed Feb 19 11:35:05 2014] [error] [client 127.0.0.1] client denied by server configuration: C:/www/zf1/public/zf1
+[Wed Feb 19 11:35:08 2014] [error] [client 127.0.0.1] client denied by server configuration: C:/www/zf1/public/zf1
+[Wed Feb 19 11:35:16 2014] [error] [client 127.0.0.1] client denied by server configuration: C:/www/zf1/public/zf1
+[Wed Feb 19 11:35:23 2014] [error] [client 127.0.0.1] client denied by server configuration: C:/www/zf1/public/zf1
+[Wed Feb 19 11:35:32 2014] [error] [client 127.0.0.1] client denied by server configuration: C:/www/zf1/public/
+[Wed Feb 19 11:52:51 2014] [error] [client 127.0.0.1] File does not exist: C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/zf1/public/favicon.ico
+[Wed Feb 19 11:52:51 2014] [error] [client 127.0.0.1] File does not exist: C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/zf1/public/favicon.ico
+[Wed Feb 19 13:33:38 2014] [error] [client 127.0.0.1] File does not exist: C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/zf1_2/public/favicon.ico
+[Wed Feb 19 13:33:38 2014] [error] [client 127.0.0.1] File does not exist: C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/zf1_2/public/favicon.ico
+[Wed Feb 19 14:37:22 2014] [alert] [client 127.0.0.1] C:/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/zf1_2/public/.htaccess: Invalid command 'RewriteEngine', perhaps misspelled or defined by a module not included in the server configuration

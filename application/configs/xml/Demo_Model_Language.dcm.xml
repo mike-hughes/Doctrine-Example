@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+				  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                  http://raw.github.com/doctrine/doctrine2/master/doctrine-mapping.xsd">
+    <entity name="Demo_Model_Language" table="countrylanguage">
+        <id name="_CountryCode" type="string" column="CountryCode" />
+        <id name="_Language" type="string" column="Language" />
+        <field name="_IsOfficial" column="IsOfficial" type="string" length="1" />
+        <field name="_Percentage" column="Percentage" type="decimal" />
+		<many-to-one field="_Country" target-entity="Demo_Model_Country" inversed-by="_Languages" >
+			<join-column name="CountryCode" referenced-column-name="Code" />
+		</many-to-one>		
+    </entity>
+</doctrine-mapping>

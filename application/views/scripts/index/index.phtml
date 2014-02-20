@@ -1,0 +1,15 @@
+<div>
+    <h1>Countries</h1>
+	<table border="1">
+		<tr>
+			<th>Code</th>
+			<th>Name</th>
+		<tr>
+<?php foreach ($this->arCountries as $oCountry) : ?>
+		<tr>
+			<td><a href="/index/edit?country=<?php echo $oCountry->getCode(); ?>"><?php echo $oCountry->getCode(); ?></a></td>
+			<td><?php echo $oCountry->getName(); ?></td>
+		<tr>
+<?php endforeach; ?>
+	</table>
+</div>
